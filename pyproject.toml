@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evokenet-node"
+version = "0.1.1"
+description = "Conservative node client for the Evoke Net pilot"
+requires-python = ">=3.10"
+authors = [{name = "Evoke Net"}]
+classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License"]
+
+[project.scripts]
+evokenet = "evokenet_node.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
